@@ -1,0 +1,395 @@
+//out: style.css
+@import '../../dw/dw.less';
+@import '../../dw/docs.less';
+
+/* ################################ CONTAINER WIDTHS: */
+@containerWidth: 960px;
+@containerWidthTablet: 480px;
+/* ################################ COLORS */
+@b: #222;
+@w: #fff;
+@g: #595959;
+@main: #0082C3;
+@maind:#005E8B;
+@light:#EAF8FE;
+/* ################################ FONTS */
+.font{ font-family: 'Dosis', sans-serif; } //300 400 600
+/* ################################ CLASSES */
+
+/* ################################ GENERAL */
+html{
+  height: auto;
+}
+body{
+  .font;
+  font-weight: 400;
+  background: @main;
+  .gradient(@maind, @main);
+  height: auto;
+  color:@g;
+}
+
+.bgwhite{ background: @w; }
+.bgblue{ background: @main; }
+.central{
+  font-weight: 300;
+  font-size: 3.8em;
+  text-align: center;
+  margin: 40px 0;
+  color:@w;
+}
+
+header{
+  .clearfix;
+  .bgwhite{
+    .border-radius(4px 4px 0 0);
+    margin-top: 20px;
+  }
+  nav{
+    li{
+      .col(12/5) !important;
+      text-align: center;
+      @media @mobile{
+        .col(12) !important;
+      }
+      a{
+        display: block;
+        padding: 10px;
+        color:@main;
+        &:hover{
+          color:@g;
+        }
+      }
+    }
+  }
+  .logocontent{text-align: center; padding-bottom: 40px;}
+  h1{
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+
+
+#quienes-somos{
+  article{
+    position: relative;
+    z-index: 2;
+    background: @light;
+    .clearfix;
+    @media @desktop{
+      &.rg{.border-radius(0 4px 4px 0);}
+      &.lf{.border-radius(4px 0 0 4px);}
+    }
+    margin-bottom: 40px;
+    h2,p{margin: 0px 10px 0px 10px;}
+    h2{
+      color:@main;
+      font-weight: 600;
+      font-size: 1.5em;
+      margin-top: 80px;
+    }
+
+    strong{color:@maind;}
+    @media @tablet, @mobile{
+      padding-bottom: 30px;
+      .border-radius(0 0 4px 4px);
+      h2{
+        margin-top: 30px;
+      }
+    }
+  }
+  .img_especialistas{
+    height: 280px;
+    background: url(../img/especialistas.jpg);
+    background-size: cover;
+    .border-radius(4px);
+    margin-top: -10px;
+    margin-bottom: -10px;
+
+    @media @desktop{ margin-left: -5px; }
+  }
+  .img_grupo{
+    height: 280px;
+    background: url(../img/grupo-quirurgico.jpg);
+    background-size: cover;
+    .border-radius(4px);
+    margin-top: -10px;
+    margin-bottom: -10px;
+
+    @media @desktop{ .transform(translateX(10px));}
+  }
+  .contamos{
+    margin-top: -40px;
+    background: url(../img/equipo-de-cirujanos.jpg);
+    background-size: cover;
+    padding: 80px 120px;
+    text-align: center;
+    color:@w;
+    font-size: 1.6em;
+    font-weight: 300;
+    text-shadow: 0 0 10px fade(@b, 80%);
+    strong{font-weight: 600;}
+    .border-radius(0 0 4px 4px);
+    @media @tablet, @mobile{
+      padding: 30px 40px;
+    }
+  }
+}
+
+#servicios{
+
+  .servcont{
+    background: @w;
+    .border-radius(4px);
+  }
+  .menuserv{
+    @media @tablet, @desktop {margin-left: 0;}
+
+  }
+  ul{
+    position: relative;
+    li{
+      list-style: none;
+      color:@w;
+      font-size: 1em;
+      font-weight: 300;
+      padding: 10px 30px;
+      .gradient(@maind/1.2, @maind);
+      cursor: pointer;
+      &:hover{
+        .gradient(@main, @main*1.2);
+      }
+      @media @tablet, @desktop{
+      &:first-child{.border-radius(4px 0 0 0 );}
+      &:last-child{.border-radius(0 0 0 4px );}
+      }
+    }
+    &:after{
+      content:"";
+      position: absolute;
+      right: 0; top: 0;
+      height: 100%;
+      width: 20%;
+      background-image: url(../img/shadowserv.png);
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 2;
+    }
+  }
+  h3{
+    color:@main;
+    font-size: 2.4em;
+    font-weight: 300;
+    small{
+      font-size: 0.5em;
+    }
+    margin: 30px 0;
+    @media @tablet{
+      font-size: 2em;
+      margin: 10px;
+    }
+  }
+  p{
+    margin: 20px 0;
+  }
+}
+
+#staff-medico{
+  .activedr{
+    img{
+      .transition;
+      .floating;
+    }
+  }
+  .nonactivedr{
+    cursor: pointer;
+    img{
+      .transition;
+      .scale(0.8);
+    }
+  }
+
+  h3.name{
+    margin: 20px 0;
+    color:@w;
+    background: @maind;
+    .border-radius(4px);
+    padding: 20px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2em;
+  }
+  .info{
+    background: @w;
+    .border-radius(4px);
+    margin-top: 20px;
+    padding: 10px 0;
+    h4{
+      margin: 20px 40px;
+      color:@main;
+      font-weight: 300;
+      font-size: 1.4em;
+    }
+    p, ul{
+      margin: 20px 40px;
+    }
+    ul{
+      list-style: none;
+      font-size: 0.9em;
+      li{
+        border-left:2px solid @w/1.2;
+        padding: 4px 10px 4px 10px;
+        margin: 2px;
+      }
+    }
+  }
+  .staffslider{padding-top: 30px;}
+}
+
+
+#buro-hospitalario{
+  img{
+    .border-radius(4px);
+  }
+  a{
+    text-decoration: none;
+    color:@w;
+    p{
+      text-align: center;
+      margin: 10px;
+    }
+    &:hover{
+      p{color:@light;}
+      img{
+        .floating;
+      }
+    }
+  }
+}
+
+#contacto{
+  margin-bottom: 40px;
+  .bgblue{ .border-radius(4px); }
+  .info{
+    a,address{
+      display: block;
+      text-decoration: none;
+      color:@w;
+      font-size: 1.2em;
+      font-weight: 300;
+      margin: 10px 20px;
+      font-style: normal;
+      @media @tablet, @mobile{
+        text-align: center;
+      }
+    }
+    a{
+      margin-top: 80px;
+      &:hover{
+        color: @maind;
+      }
+    }
+    @media @tablet{
+      padding-bottom: 80px;
+    }
+    @media @mobile{
+      padding-bottom: 100px;
+    }
+  }
+  .form{
+    .border-radius(4px);
+    margin-top: -20px;
+    margin-bottom: -20px;
+    background: @light;
+    padding: 20px 0;
+    label{
+      color:@main;
+      font-weight: 300;
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+    input, textarea{
+      border:none;
+      border: 1px solid @light/1.1;
+      color:@g;
+      padding: 5px;
+      .font;
+      font-size: 1em;
+    }
+    button{
+      border:none;
+      background: @maind;
+      color:@w;
+      .font;
+      font-weight: 300;
+      font-size: 1.1em;
+      padding: 10px 40px;
+      float: right;
+      margin-top: 20px;
+      .border-radius(4px);
+      &:hover{
+        cursor: pointer;
+        background: @main;
+      }
+    }
+    .resultado{
+      color:@main;
+      text-align: center;
+      *{padding: 10px;}
+    }
+  }
+}
+
+
+footer{
+  .bgwhite{.border-radius(4px);}
+  padding-top: 60px;
+  padding-bottom: 80px;
+  .imago{margin-top: -48px;}
+  @media @desktop{
+    .imago{
+      margin-bottom: -48px;
+    }
+  }
+  nav{
+    li{
+      .col(12/5) !important;
+      text-align: center;
+      @media @mobile{
+        .col(12) !important;
+      }
+      a{
+        display: block;
+        padding: 10px;
+        color:@main;
+        &:hover{
+          color:@g;
+        }
+      }
+    }
+  }
+}
+
+
+.pointillism, .pointillism2{
+  width: 678px; height: 678px;
+  position: absolute;
+  z-index: -1;
+}
+.pointillism{
+  background: url(../img/pointillism.png);
+  background-repeat: no-repeat;
+  left: -300px;
+  top: -300px;
+  background-position: center;
+}
+
+.pointillism2{
+  background: url(../img/pointillism_trans.png);
+  background-repeat: no-repeat;
+  right: 0px;
+  top: 3100px;
+  width: 300px;
+}

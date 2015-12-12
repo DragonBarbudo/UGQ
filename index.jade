@@ -1,0 +1,146 @@
+
+include site/_config.jade
+
++html5
+  +head(title, stylesheets, keywords, description)
+  body    
+
+    header
+      .container: .col10.push1.col-t12.push-t0.col-m12.push-m0.bgwhite
+          nav: +menu('index', menu, 'horizontal', '#', ' ', '', {'data-scroll':true})
+      .container: .col10.push1.col-t12.push-t0.col-m12.push-m0.bgwhite
+        .container: .col4.push4.col-t6.push-t3.col-m8.push-m2.logocontent
+          h1: img(src="site/img/ugq@2x.png",  alt="#{title}").w100
+    section#quienes-somos
+      .container
+        .col12
+          article.container.rg
+            .img_especialistas.col6.col-t12.col-m12(data-sr) &nbsp;
+            .text.col6.col-t12.col-m12
+              h2 Especialistas y Profesionales en Medicina
+              p Nos dedicamos a la atención segura, eficiente y cálida de los enfermos de obesidad severa, patologías gastrointestinales y que por sus condiciones o su estado de salud requieran de <strong>cirugía</strong> o <strong>control médico</strong>.
+      .container
+        .col12
+          article.container.lf
+            .img_grupo.col6.col-t12.col-m12.nodesktop(data-sr) &nbsp;
+            .text.col6.col-t12.col-m12
+              h2 Nuestro Grupo Quirúrgico lo acompaña
+              p Nuestros servicios, en su mayoría requieren alguna intervención quirúrgica, por lo cual hemos creado una gama de opciones hospitalarias que se adaptan a su ubicación, gusto y accesibilidad económica.
+            .img_grupo.col6.notablet.nomobile(data-sr) &nbsp;
+      .container
+        .col10.push1.col-m12.push-m0
+          div.contamos(data-sr) Contamos con un equipo constituido por <strong>Cirujanos</strong>, <strong>Nutriólogos</strong>, <strong>Psicólogos</strong>, <strong>Gastroenterólogo Internista</strong>, <strong>Cirujano Plástico</strong> y <strong>Anestesiólogo</strong>, para que su atención médica sea integral y le brindemos la mayor de las confianzas para su tratamiento.
+    section#servicios
+      h2.central Servicios
+      .container
+        .col12
+          .container.servcont
+            .col4.col-m12.menuserv
+              ul
+                - var servs = ['Cirugía para Obesidad','Reflujo Gastroesofágico','Colelitiasis','Coledocolitiasis','Diverticulitis','Sindrome de Colon Irritable','Hernias de Pared Abdominal','Hernias Inguinales','Hernias Hiatales','Abdomen Agudo']
+                each s,indx in servs
+                  li(onclick="gotoSlider('.servicioslider', #{indx})")=s
+            .col8.col-m12
+              .slider.servicioslider
+                div
+                  h3 Cirugía para Obesidad <small>(Bypass Gastrico- Manga Gastrica)</small>
+                  p Se reducen dos elementos: el tamaño del estómago, dejando sólo una pequeña porción, y la parte inicial del intestino delgado (conocida como duodeno. La pequeña porción de estómago que se mantiene se conecta con la parte media del intestino delgado, de manera que los alimentos ingeridos no atravesarán la parte descartada del estómago ni del duodeno. Se consigue con ello varios efectos: reducir la asimilación de alimentos ingeridos, estar saciados con menos cantidad de alimento (el estómago más pequeño se llena antes), y disminuir la producción de insulina por el páncreas.
+                  p Es una de las técnicas de cirugía bariátrica, es decir para tratamiento de la obesidad mórbida y es un procedimiento de tipo mixto: restrictivo y malabsortivo. Es la técnica más utilizada en EUA y en otros países, debido a su escasa morbimortalidad, buenos resultados a largo plazo y excelente calidad de vida tras la cirugía.
+                div 
+                  h3 Enfermedades por Reflujo Gastroesofágico
+                  p La palabra reflujo significa ir en contra de un flujo, en este caso, del flujo normal de los alimentos.
+                  p Es una afección en la cual los contenidos estomacales se devuelven desde el estómago hacia el esófago, el conducto que va desde la boca hasta el estómago. Esto puede irritar el esófago y causa acidez gástrica y otros síntomas.
+                div
+                  h3 Colelitiasis
+                  p La colelitiasis, comúnmente conocida como cálculos biliares o litiasis biliar, se refiere a la formación de cálculos en la vías biliares, sobre todo en la vesícula biliar. Son acrecencias de materias sólidas que pueden ser tan pequeñas como granos de arenilla o, en ocasiones excepcionales, tan grandes que ocupan toda la vesícula. La mayor parte, sin embargo, suelen ser de tamaño intermedio, es decir de menos de 20 mm, aproximadamente una pulgada. La mayor parte de estos cristales (cerca de un 80%) están constituidos por cristales de colesterol, el resto son cristales pigmentados de color negro.
+                div
+                  h3 Coledocolitiasis
+                  p La coledocolitiasis es la presencia de cálculos en la vía biliar principial. Los cálculos así impactados pueden ser pequeños o de gran tamaño, únicos o múltiples y tienden a aparecer en un bajo porcentaje de los pacientes con colelitiasis.
+                div
+                  h3 Diverticulitis
+                  p Es un trastorno digestivo consecuencia de una diverticulosis, la cual implica la formación de vejigas o bolsas en la pared del intestino llamadas divertículos, cuya aparición es más común en el intestino grueso y especialmente en el colon, pero también puede manifestarse en el intestino delgado. La diverticulitis, es la inflamación de los divertículos.
+                div
+                  h3 Sindrome de Colon Irritable
+                  p Es un conjunto de trastornos funcionales del intestino bastante frecuentes, que se caracterizan por la presencia de episodios recurrentes de dolor abdominal, molestias acompañadas de hinchazón abdominal y alteraciones en la frecuencia y/o en la consistencia de las deposiciones. Es una afectación muy frecuente, especialmente en personas jóvenes, constituyendo en la práctica clínica habitual uno de los principales motivos de consulta tanto en Atención Primaria como en Aparato Digestivo.
+                div
+                  h3 Hernias de Pared Abdominal
+                  p Consiste en un defecto en la pared abdominal a traves de la cual protruye tejido o algún órgano que se encuentra dentro de la cavidad abdominal
+                div
+                  h3 Hernias Inguinales
+                  p Es una protrusión del contenido de la cavidad abdominal por un punto débil del conducto inguinal. Sólo una operación quirúrgica puede resolver una hernia inguinal. Hay dos tipos de hernias inguinales, una directa y la otra indirecta. Son eventos comunes y la reparación de hernias inguinales es la operación más frecuente en la práctica quirúrgica.
+                div
+                  h3 Hernias Hiatales
+                  p Es una afección en la cual una porción del estómago sobresale dentro del tórax, a través de un orificio que se encuentra ubicado en el diafragma, la capa muscular que separa el tórax del abdomen y que se utiliza en la respiración.
+                div
+                  h3 Abdomen Agudo
+                  p Es un cuadro grave de emergencia médica, caracterizado por síntomas y signos localizados en la cavidad abdominal principalmente dolor de no mayor de 8 horas de evolución, que hacen sospechar la existencia de una enfermedad severa que afecta a alguno de los órganos intraabdominales, y que posiblemente necesite resolución quirúrgica. Por lo general es debido a razones infecciosas o inflamatorias, fenómenos de obstrucción intestinal, traumatismos o neoplasias.
+
+    section#staff-medico
+      h2.central Staff Médico
+      .container
+        .col2.push3.col-t4.push-t0.col-m4.push-m0
+          div(onclick="gotoSlider('.staffslider', 0, this)").nonactivedr.dr1: img(src="site/img/dr_a.png", alt="Dr. Davila Jaimes Gerardo Ángel").w100
+        .col2.col-t4.col-m4
+          div(onclick="gotoSlider('.staffslider', 1, this)").nonactivedr: img(src="site/img/dr_b.png", alt="Lic. Yazmin Martiñon Cambron").w100
+        .col2.col-t4.col-m4
+          div(onclick="gotoSlider('.staffslider', 2, this)").nonactivedr: img(src="site/img/dr_c.png", alt="Dr. Nain Maldonado").w100
+      .container
+        .col12.staffslider
+          div
+            h3.name Dr. Davila Jaimes Gerardo Ángel (Director del Grupo)
+            .info
+              h4 Egresado de la licenciatura de Médico Cirujano de la Escuela Superior de Medicina del Instituto Politécnico Nacional. Cédula: 7440779
+              +dr_a
+          div
+            h3.name Lic. Yazmin Martiñon Cambron
+            .info
+              h4 Licenciada en Ciencias de la Nutrición. Cédula: 8381342
+              +dr_b
+          div
+            h3.name Dr. Nain Maldonado
+            .info
+              h4 Especialista en Cirugía Plástica Estética y Reconstructiva. Cédula Profesional: 4443242
+              +dr_c
+
+    section#buro-hospitalario
+      h2.central Buró Hospitalario
+      .container
+        .col4.col-m10.push-m1: a(href="http://www.starmedica.com/_ES/_HOSPITAL/hospital_Star-M%C3%A9dica-Lomas-Verdes_21.aspx", target="_blank")
+          img(src="site/img/buro_sm.png", alt="StarMedica Lomas Verdes", data-sr).w100
+          p StarMedica Lomas Verdes
+        .col4.col-m10.push-m1: a(href="http://www.centroquirurgicosatelite.com/", target="_blank")
+          img(src="site/img/buro_hcq.png", alt="Hospital Centro Quirúrgico Satelite", data-sr).w100
+          p Hospital Centro Quirúrgico Satelite
+        .col4.col-m10.push-m1: a(href="http://www.josesat.com.mx/", target="_blank")
+          img(src="site/img/buro_sj.png", alt="Hospital San José Satelite", data-sr).w100
+          p Hospital San José Satelite
+
+
+    section#contacto
+      h2.central Contacto
+      .container
+        .col12.bgblue
+          .container
+            .col4.col-t12.col-m12.info
+              a(href="mailto:contacto@ugq.com.mx") contacto@ugq.com.mx
+              address Tel: (55) 2625 3111- 5344 8510
+            .col8.col-t12.col-m12.form
+              +formSimple('contacto@ugq.com.mx', 'contacto@ugq.com.mx', 'Mensaje nuevo')
+    footer
+      .container
+        .col12.bgwhite
+          .container
+            .col2.col-t2.push-t5.col-m4.push-m4:  a(href="header", data-scroll): img(src="site/img/ugq_imago.png", alt="#{title}", data-sr).imago.w100 
+            .col10.col-t12.col-m12
+              nav: +menu('index', menu, 'horizontal', '#', ' ', '', {'data-scroll':true})
+    
+    .pointillism
+    .pointillism2
+    +scripts
+    
+    
+    
+    
+    
+    
+    

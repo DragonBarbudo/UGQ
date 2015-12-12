@@ -1,0 +1,70 @@
+include ../dw/dw.jade
+
+- var domain = "index.html"
+
+//- METAS
+- var title = "Unidad Gastro Quirúrgica"
+- var keywords = "Cirugía gastro-intestinal, cirugía lapararoscopica avanzada, cirugia para la obesidad y diabetes"
+- var description = "Atención segura, eficiente y cálida de los enfermos de obesidad severa, patologías gastrointestinales y que por sus condiciones o su estado de salud requieran de cirugía o control médico."
+
+//- STYLESHEETS
+- var stylesheets = []
+- stylesheets.push('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+- stylesheets.push('https://fonts.googleapis.com/css?family=Dosis:300,400,600')
+- stylesheets.push('http://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css')
+- stylesheets.push('https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.1/css/swipebox.min.css')
+- stylesheets.push('site/css/style.css') //Main style
+
+//- JAVASCRIPTS
+- var javascripts = []
+- javascripts.push('http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.core.min.js')
+- javascripts.push('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+- javascripts.push('http://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js')
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.1/js/jquery.swipebox.min.js')
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js')
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.3.2/scrollReveal.min.js')
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/scrollify/0.1.10/jquery.scrollify.min.js')
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/7.0.2/js/smooth-scroll.min.js')
+- javascripts.push('site/js/script.js') //Main Js
+
+//- MENU
+- var menu = [] //- menu.push('PageName', 'Slug')
+- menu.push(['¿Quienes somos?', 'quienes-somos']) //[0]
+- menu.push(['Servicios', 'servicios']) //[1]
+- menu.push(['Staff Médico', 'staff-medico']) //[2]
+- menu.push(['Buró Hospitalario', 'buro-hospitalario']) //[3]
+- menu.push(['Contacto', 'contacto'])
+
+
+
+
+
+
+
+mixin dr_a
+  ul
+    li Especialidad en Cirug&iacute;a General realizada en el Centro Medico ISSEMYM en Metepec, Estado de M&eacute;xico y avalada por la Universidad Aut&oacute;noma del Estado de M&eacute;xico.
+    li Curso Internacional de Sepsis Abdominal realizado en el Centro Medico Issemym.
+    li Diplomado de Laparoscopia Avanzada realizado en el Hospital &Aacute;ngeles de Interlomas avalado por la Asociaci&oacute;n Mexicana de Cirug&iacute;a Endoscopica y Asociaci&oacute;n Latinoamericana de Cirug&iacute;a Endoscopica
+    li Diplomado de Laparoscopia Avanzada Realizado en Centro Medico ISSEMYM avalado por la Universidad Aut&oacute;noma del Estado de M&eacute;xico y por el Colegio Americano de Cirujanos.
+    li Diplomado Manejo Quir&uacute;rgico y Multidisciplinario de la Obesidad  Avalado por la Universidad Nacional Aut&oacute;noma de M&eacute;xico, Asociaci&oacute;n Mexicana de Cirug&iacute;a Endosc&oacute;pica y Colegio Mexicano de Cirug&iacute;a para la Obesidad y Enfermedades Metab&oacute;licas.
+    li Curso Internacional de Hernias realizado en San Antonio Texas E.U.A 2013
+    li Curso internacional de Cirugia Bariatrica, Hospital Nicholson Orlando Florida, E.U.A 2013
+    li Profesor de Curso de Cirugia Segura en el Centro Medico ISSEMYM 2013
+    li Profesor Adjunto del Posgrado de Cirugia General UAEM
+    li Profesor titular de Internado Medico, UNAM FES Iztacala
+    li Curso Internacional Manejo quirurgico de la Hernia Ventral Compleja realizado en el Centro Medico Issemym y Avalado por la Asociaci&oacute;n Mexicana de Hernia, Asociacion Mexicana de Cirug&iacute;a General y Asociacion Mexicana de Cirug&iacute;a Endosc&oacute;pica en Marzo del 2014
+    li Curso Endoscopia Bariatrica, Congreso Nacional de Cirug&iacute;a para la Obesidad y Enfermedades Metab&oacute;licas, Le&oacute;n Guanajuato 2014.
+    li Fellowship Cirugia Gastrointestinal y de Cirugia Laparoscopica en Hospital Clinic de Barcelona 2015
+
+
+mixin dr_b
+  ul
+    li Diplomado en Nutrición Bariátrica. Hospital  Ángeles del  Pedregal, 2013.
+    li Diplomado Educador en Diabetes. Asociación Mexicana de Diabetes, 2014.
+    li Certificación como Educadora en Diabetes. Consejo Nacional de Educadores en Diabetes, 2015.
+    li Diplomado en Nutrición Pediátrica. Centro de Orientación Alimentaria de la Universidad La Salle, en curso. 
+mixin dr_c
+  ul
+    li Especialidad: 7876032
+    li Consejo (CMCPER): 1636
